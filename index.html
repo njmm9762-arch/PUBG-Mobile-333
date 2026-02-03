@@ -2,38 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PUBG MOBILE – Official</title>
+<title>PUBG MOBILE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 :root{
-  --blue:#0a84ff;
+  --blue:#1877f2;
+  --bg:#f0f2f5;
   --card:#ffffff;
-  --gold:#d4af37;
 }
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(180deg,#eaf2ff,#ffffff);
+  background:var(--bg);
 }
 header{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:white;
+  background:#fff;
+  padding:10px 14px;
   display:flex;
   align-items:center;
   gap:10px;
-  padding:10px 14px;
-  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  z-index:999;
 }
 header img{
   width:42px;
   height:42px;
   border-radius:50%;
 }
-header .name{
-  font-weight:bold;
+header b{
   font-size:18px;
 }
 .container{
@@ -43,9 +42,9 @@ header .name{
 }
 .post{
   background:var(--card);
-  border-radius:16px;
-  margin-bottom:20px;
-  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  border-radius:12px;
+  margin-bottom:18px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
   overflow:hidden;
 }
 .post-header{
@@ -59,44 +58,44 @@ header .name{
   height:40px;
   border-radius:50%;
 }
-.stats{
+.post-header .info{
+  font-size:14px;
+}
+.views{
+  color:#65676b;
   font-size:13px;
-  color:#555;
 }
-.video-wrap{
+.video-box{
   position:relative;
-}
-.watermark{
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  background:rgba(0,0,0,.6);
-  color:white;
-  padding:4px 8px;
-  font-size:12px;
-  border-radius:8px;
 }
 video{
   width:100%;
   background:black;
 }
+.watermark{
+  position:absolute;
+  bottom:8px;
+  right:8px;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:6px;
+}
 .desc{
   padding:12px;
   font-size:15px;
-  line-height:1.6;
 }
 .actions{
   display:flex;
   justify-content:space-around;
   padding:10px 0;
-  border-top:1px solid #eee;
+  border-top:1px solid #ddd;
 }
 .action{
   cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:6px;
   font-weight:bold;
+  color:#65676b;
   transition:.2s;
 }
 .action:hover{
@@ -106,12 +105,12 @@ video{
   color:var(--blue);
 }
 .pinned{
-  border:2px solid var(--gold);
-  animation:glow 2s infinite alternate;
+  border:2px solid var(--blue);
 }
-@keyframes glow{
-  from{box-shadow:0 0 8px var(--gold);}
-  to{box-shadow:0 0 18px var(--gold);}
+.ad-link{
+  color:var(--blue);
+  font-weight:bold;
+  text-decoration:none;
 }
 </style>
 </head>
@@ -120,38 +119,41 @@ video{
 
 <header>
   <img src="unnamed.webp">
-  <div class="name">PUBG MOBILE 👑 Official</div>
+  <b>PUBG MOBILE ✔</b>
 </header>
 
 <div class="container">
 
-<!-- PINNED AD -->
+<!-- منشور إعلاني مثبت -->
 <div class="post pinned">
   <div class="post-header">
     <img src="unnamed.webp">
-    <div>
-      <b>PUBG MOBILE – Official Store</b>
-      <div class="stats">📌 منشور مثبت • 👁 80.6M</div>
+    <div class="info">
+      <b>PUBG MOBILE – Official</b><br>
+      <span class="views">📌 منشور مثبت • 👁 82,000,000</span>
     </div>
   </div>
   <div class="desc">
     🔥 الموقع الرسمي لشحن PUBG Mobile  
-    خصومات قوية – كوبونات – عروض حصرية  
-    ⚡ متاح لفترة محدودة
+    خصومات – كوبونات – عروض حصرية  
+    <br><br>
+    🔗 <a class="ad-link" href="https://njmm9762-arch.github.io/PMGC-mostafez-/" target="_blank">
+    الدخول إلى الموقع الرسمي
+    </a>
   </div>
 </div>
 
-<!-- POST 1 -->
+<!-- فيديو 1 -->
 <div class="post">
   <div class="post-header">
     <img src="unnamed.webp">
-    <div>
-      <b>PUBG MOBILE</b>
-      <div class="stats">👁 90.4M • 👍 18.7M • 2025</div>
+    <div class="info">
+      <b>PUBG MOBILE</b><br>
+      <span class="views">👁 90,400,000 مشاهدة</span>
     </div>
   </div>
 
-  <div class="video-wrap">
+  <div class="video-box">
     <video controls playsinline>
       <source src="video1.mp4" type="video/mp4">
     </video>
@@ -159,29 +161,29 @@ video{
   </div>
 
   <div class="desc">
-    🔥 Epic PUBG Mobile moments  
-    لقطات أسطورية – مهارات – كلاشات نار
+    🔥 لقطات أسطورية من PUBG Mobile  
+    مهارات – كلاشات – ضحك
   </div>
 
   <div class="actions">
     <div class="action" onclick="like(this)">
-      👍 <span class="count">18.7M</span>
+      👍 <span>18.7M</span>
     </div>
-    <div class="action" onclick="share()">↗ Share</div>
+    <div class="action" onclick="share()">↗ مشاركة</div>
   </div>
 </div>
 
-<!-- POST 2 -->
+<!-- فيديو 2 -->
 <div class="post">
   <div class="post-header">
     <img src="unnamed.webp">
-    <div>
-      <b>PUBG MOBILE</b>
-      <div class="stats">👁 63.1M • 👍 21.3M • 2025</div>
+    <div class="info">
+      <b>PUBG MOBILE</b><br>
+      <span class="views">👁 63,800,000 مشاهدة</span>
     </div>
   </div>
 
-  <div class="video-wrap">
+  <div class="video-box">
     <video controls playsinline>
       <source src="video2.mp4" type="video/mp4">
     </video>
@@ -195,23 +197,23 @@ video{
 
   <div class="actions">
     <div class="action" onclick="like(this)">
-      👍 <span class="count">21.3M</span>
+      👍 <span>21.3M</span>
     </div>
-    <div class="action" onclick="share()">↗ Share</div>
+    <div class="action" onclick="share()">↗ مشاركة</div>
   </div>
 </div>
 
-<!-- POST 3 -->
+<!-- فيديو 3 -->
 <div class="post">
   <div class="post-header">
     <img src="unnamed.webp">
-    <div>
-      <b>PUBG MOBILE</b>
-      <div class="stats">👁 34.9M • 👍 15.9M • 2025</div>
+    <div class="info">
+      <b>PUBG MOBILE</b><br>
+      <span class="views">👁 34,900,000 مشاهدة</span>
     </div>
   </div>
 
-  <div class="video-wrap">
+  <div class="video-box">
     <video controls playsinline>
       <source src="video3.mp4" type="video/mp4">
     </video>
@@ -219,15 +221,14 @@ video{
   </div>
 
   <div class="desc">
-    💥 Pro gameplay & reactions  
-    محتوى رسمي
+    💥 Pro gameplay & reactions
   </div>
 
   <div class="actions">
     <div class="action" onclick="like(this)">
-      👍 <span class="count">15.9M</span>
+      👍 <span>15.9M</span>
     </div>
-    <div class="action" onclick="share()">↗ Share</div>
+    <div class="action" onclick="share()">↗ مشاركة</div>
   </div>
 </div>
 
@@ -237,8 +238,6 @@ video{
 function like(el){
   if(el.classList.contains("liked")) return;
   el.classList.add("liked");
-  let span = el.querySelector(".count");
-  span.textContent = span.textContent;
 }
 function share(){
   if(navigator.share){
