@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أقوى فيديوهات PUBG Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0b1220;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .video-box {
+      margin: 20px;
+      background: #111a2e;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+
+    .desc {
+      padding: 12px;
+      font-size: 14px;
+      color: #dbe7ff;
+      line-height: 1.6;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      background: #0e1a33;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .stats div {
+      background: #1c2a4a;
+      padding: 6px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .stats div:active {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- فيديو 1 -->
+<div class="video-box">
+  <video controls>
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+  <div class="desc">
+    لقطة نادرة من أقوى مواجهات PUBG Mobile 🔥  
+    تصويب دقيق وسرعة رد فعل خرافية حتى آخر ثانية.
+  </div>
+  <div class="stats">
+    <div onclick="like(this)">👍 <span>0</span></div>
+    <div>👁️ 1.3K</div>
+    <div onclick="share()">↗️</div>
+  </div>
+</div>
+
+<!-- فيديو 2 -->
+<div class="video-box">
+  <video controls>
+    <source src="video2.mp4" type="video/mp4">
+  </video>
+  <div class="desc">
+    سيطرة كاملة على السكواد 😎  
+    تكتيك عالي وقتال بدون أخطاء.
+  </div>
+  <div class="stats">
+    <div onclick="like(this)">👍 <span>0</span></div>
+    <div>👁️ 980</div>
+    <div onclick="share()">↗️</div>
+  </div>
+</div>
+
+<!-- فيديو 3 -->
+<div class="video-box">
+  <video controls>
+    <source src="video3.mp4" type="video/mp4">
+  </video>
+  <div class="desc">
+    ملحمة ببجي حقيقية ⚡  
+    اشتباكات سريعة ونهاية مفاجئة.
+  </div>
+  <div class="stats">
+    <div onclick="like(this)">👍 <span>0</span></div>
+    <div>👁️ 2.4K</div>
+    <div onclick="share()">↗️</div>
+  </div>
+</div>
+
+<script>
+  function like(el) {
+    let s = el.querySelector("span");
+    s.innerText = Number(s.innerText) + 1;
+  }
+
+  function share() {
+    if (navigator.share) {
+      navigator.share({
+        title: "أقوى فيديوهات PUBG Mobile",
+        url: location.href
+      });
+    } else {
+      alert("انسخ الرابط وشاركه في واتساب أو تيليجرام");
+    }
+  }
+</script>
+
+</body>
+</html>
