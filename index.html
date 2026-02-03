@@ -1,164 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>PUBG MOBILE</title>
+<title>PUBG MOBILE – Official Videos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{margin:0;background:#f0f2f5;font-family:Arial}
-.header{background:#fff;padding:10px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:1000}
-.header img{width:40px;height:40px;border-radius:50%}
-.header span{font-weight:bold;color:#1877f2}
-.feed{max-width:500px;margin:auto}
-.post{background:#fff;margin:12px 0;border-radius:10px;overflow:hidden;position:relative}
-.post-header{display:flex;align-items:center;padding:8px;gap:8px}
-.post-header img{width:35px;height:35px;border-radius:50%}
-.badge{color:gold}
-video{width:100%;background:black}
-.watermark{position:absolute;bottom:10px;right:10px;color:white;font-weight:bold;opacity:.6}
-.stats,.actions{display:flex;justify-content:space-around;padding:8px;color:#555}
-.actions span{font-size:22px;cursor:pointer}
-.actions span:active{transform:scale(1.3)}
-.desc{padding:8px;font-size:14px}
-.menu{position:absolute;top:10px;right:10px;color:white;font-size:22px;cursor:pointer}
-.menu-box{display:none;position:absolute;right:10px;top:40px;background:#fff;border-radius:8px}
-.menu-box div{padding:8px;cursor:pointer}
-.menu-box div:hover{background:#eee}
-.reels{position:fixed!important;top:0;left:0;width:100vw!important;height:100vh!important;object-fit:cover;z-index:9999}
-.like-pop{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:90px;animation:pop .6s}
-@keyframes pop{0%{scale:.2;opacity:0}50%{opacity:1}100%{scale:1.2;opacity:0}}
-.pinned{background:#1877f2;color:white;padding:10px;border-radius:10px;margin:10px}
-.pinned a{color:yellow;text-decoration:none;font-weight:bold}
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f8ff;
+    color:#000;
+}
+
+/* منشور مثبت */
+.pinned{
+    background:#0a66ff;
+    color:#fff;
+    padding:12px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* الفيديو */
+.video-box{
+    position:relative;
+    max-width:420px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+video{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* علامة مائية */
+.watermark{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color:#fff;
+    font-size:12px;
+    opacity:.8;
+}
+
+/* الأزرار */
+.actions{
+    position:absolute;
+    right:10px;
+    top:35%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.action-btn{
+    background:#fff;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.action-btn:active{
+    transform:scale(1.2);
+}
+
+.action-btn img{
+    width:24px;
+}
+
+/* العدادات */
+.counters{
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+/* قائمة 3 نقط */
+.menu{
+    position:absolute;
+    right:60px;
+    top:38%;
+    background:#fff;
+    border-radius:8px;
+    display:none;
+    flex-direction:column;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.menu button{
+    border:none;
+    background:none;
+    padding:10px 15px;
+    cursor:pointer;
+    text-align:left;
+}
+.menu button:hover{
+    background:#eee;
+}
+
+/* وضع الريلز */
+.fullscreen{
+    position:fixed !important;
+    top:0;
+    left:0;
+    width:100% !important;
+    height:100% !important;
+    z-index:9999;
+    background:#000;
+}
+
+/* زر الترجمة/كتابة الصوت */
+.transcript{
+    position:absolute;
+    bottom:50px;
+    left:10px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    padding:5px 8px;
+    border-radius:5px;
+    font-size:12px;
+    cursor:pointer;
+}
+.transcript.active{
+    background:rgba(10,102,255,0.8);
+}
 </style>
 </head>
 
 <body>
 
-<div class="header">
- <img src="unnamed.webp">
- <span>PUBG MOBILE ✓</span>
-</div>
-
-<div class="feed">
-
-<!-- منشور إعلاني مثبت -->
 <div class="pinned">
- 🔥 شحن PUBG Mobile الرسمي – خصومات وكوبونات  
- <br>
- <a href="https://njmm9762-arch.github.io/PMGC-mostafez-/" target="_blank">
- دخول الموقع الرسمي
- </a>
- <br> 👍 12M | 👁 30M | ↗ 5M
+<img src="unnamed.webp" alt="PUBG Logo" style="height:30px; vertical-align:middle;">  
+⭐ العرض الرسمي لشحن شدات PUBG Mobile – الموقع المعتمد ⭐
 </div>
 
 <script>
-const posts=[
- {id:1,v:"video1.mp4",d:"لقطة أسطورية 🔥 قتال ناري وضحك"},
- {id:2,v:"video2.mp4",d:"ميمز PUBG Mobile 😂"},
- {id:3,v:"video3.mp4",d:"تحديات مستحيلة 💀"},
- {id:4,v:"9653931b6ff85e3c8e6b5191924745b5.mp4",d:"احتراف وسيطرة 👑"},
- {id:5,v:"94c520f54ee59f4fa74bfeb34a15b3d8.mp4",d:"ضحك هستيري 🤣"},
- {id:6,v:"259534b8ad8aed5c360093bcc3a9d61e.mp4",d:"لقطات كلاسيك 🔫"},
- {id:7,v:"f805b138f7b52e48a5e0e937e61b5b69.mp4",d:"مواجهات سريعة ⚡"},
- {id:8,v:"b8ac8d71a88c7c95b51289ffee6f914b.mp4",d:"قتال سكواد 🔥"},
- {id:9,v:"e35d53f1dbc4fb76af9b2309cb18d76c.mp4",d:"نهايات صادمة 😱"}
+const videos = [
+ {src:"video1.mp4", desc:"أقوى لقطات ببجي – سيطرة كاملة 🔥"},
+ {src:"video2.mp4", desc:"لقطات احترافية نادرة من PUBG Mobile 👑"},
+ {src:"video3.mp4", desc:"دخول الأساطير – لا يفوتك 🎯"},
+ {src:"9653931b6ff85e3c8e6b5191924745b5.mp4", desc:"لقطة تاريخية – ملايين المشاهدات"},
+ {src:"94c520f54ee59f4fa74bfeb34a15b3d8.mp4", desc:"أكشن غير طبيعي 🔥"},
+ {src:"259534b8ad8aed5c360093bcc3a9d61e.mp4", desc:"ببجي الحقيقي يبدأ هنا"},
+ {src:"f805b138f7b52e48a5e0e937e61b5b69.mp4", desc:"سيطرة كاملة في ساحة المعركة"},
+ {src:"b8ac8d71a88c7c95b51289ffee6f914b.mp4", desc:"لقطات أسطورية نادرة"},
+ {src:"e35d53f1dbc4fb76af9b2309cb18d76c.mp4", desc:"مشاهد لا تتكرر"}
 ];
 
-function getNum(key,base){
- let v=localStorage.getItem(key);
- if(!v){
-  v=base+Math.floor(Math.random()*5000);
-  localStorage.setItem(key,v);
- }
- return parseInt(v);
-}
+videos.forEach((v,i)=>{
+document.write(`
+<div class="video-box" id="box${i}">
+<video src="${v.src}" muted autoplay loop></video>
 
-posts.forEach(p=>{
- let views=getNum("views_"+p.id,30000000);
- let likes=getNum("likes_"+p.id,15000000);
+<div class="watermark">PUBG MOBILE</div>
 
- // زيادة مشاهدة لكل زائر
- localStorage.setItem("views_"+p.id,views+1);
+<div class="transcript" id="transcript${i}" onclick="toggleTranscript(${i})">🔊 تشغيل/إيقاف النص</div>
 
- document.write(`
-<div class="post">
- <div class="post-header">
-  <img src="unnamed.webp">
-  <strong>PUBG MOBILE</strong>
-  <span class="badge">👑</span>
- </div>
+<div class="actions">
+<div class="action-btn" onclick="like(${i})">
+<img src="https://cdn-icons-png.flaticon.com/512/2589/2589175.png">
+</div>
 
- <video class="reel-video" playsinline controls data-id="${p.id}">
-  <source src="${p.v}" type="video/mp4">
- </video>
+<div class="action-btn" onclick="toggleMenu(${i})">
+<img src="https://cdn-icons-png.flaticon.com/512/2089/2089792.png">
+</div>
+</div>
 
- <div class="watermark">PUBG MOBILE</div>
+<div class="menu" id="menu${i}">
+<button onclick="shareWhats('${v.src}')">مشاركة واتساب</button>
+<button onclick="shareTele('${v.src}')">مشاركة تليجرام</button>
+<button onclick="downloadVid('${v.src}')">تحميل الفيديو</button>
+</div>
 
- <div class="stats">
-  <span id="v_${p.id}">👁 ${views.toLocaleString()}</span>
-  <span id="l_${p.id}">👍 ${likes.toLocaleString()}</span>
-  <span>↗ ${Math.floor(Math.random()*5+5)}M</span>
- </div>
+<div class="counters">
+<span id="views${i}">${Math.floor(Math.random()*50)+30}M مشاهدة</span>
+<span id="likes${i}">${Math.floor(Math.random()*20)+15}M إعجاب</span>
+</div>
 
- <div class="actions">
-  <span onclick="like(${p.id})">👍</span>
-  <span onclick="shareWA()">↗</span>
-  <span onclick="shareTG()">✈</span>
-  <span onclick="downloadVideo('${p.v}')">⬇</span>
- </div>
-
- <div class="desc">${p.d}</div>
+<div style="padding:10px;font-weight:bold">${v.desc}</div>
 </div>
 `);
 });
-</script>
 
-</div>
+// دوال
+function like(i){
+ let el=document.getElementById("likes"+i);
+ let n=parseInt(el.innerText);
+ el.innerText=(n+1)+"M إعجاب";
+}
 
-<script>
-/* صوت فيديو واحد فقط */
-document.querySelectorAll("video").forEach(v=>{
- v.onplay=()=>document.querySelectorAll("video").forEach(o=>{if(o!==v)o.pause();});
+function toggleMenu(i){
+ let m=document.getElementById("menu"+i);
+ m.style.display=m.style.display=="flex"?"none":"flex";
+}
+
+function shareWhats(v){
+ window.open("https://wa.me/?text=شاهد هذا الفيديو "+location.href);
+}
+
+function shareTele(v){
+ window.open("https://t.me/share/url?url="+location.href);
+}
+
+function downloadVid(v){
+ let a=document.createElement("a");
+ a.href=v;
+ a.download=v;
+ a.click();
+}
+
+function toggleTranscript(i){
+ let t=document.getElementById("transcript"+i);
+ t.classList.toggle("active");
+}
+
+// دبل كليك لايك + تربل كليك ريلز
+document.querySelectorAll("video").forEach((vid)=>{
+ let clicks=0;
+ vid.addEventListener("click",()=>{
+  clicks++;
+  setTimeout(()=>{
+   if(clicks==2){vid.parentElement.querySelector(".action-btn").click();}
+   if(clicks>=3){vid.parentElement.classList.toggle("fullscreen");}
+   clicks=0;
+  },300);
+ });
 });
-
-/* لايك حقيقي +1 مرة واحدة */
-function like(id){
- if(localStorage.getItem("liked_"+id))return;
- let likes=parseInt(localStorage.getItem("likes_"+id));
- likes++;
- localStorage.setItem("likes_"+id,likes);
- localStorage.setItem("liked_"+id,true);
- document.getElementById("l_"+id).innerHTML="👍 "+likes.toLocaleString();
-}
-
-/* مشاركة */
-function shareWA(){
- window.open("https://wa.me/?text="+encodeURIComponent(location.href));
-}
-function shareTG(){
- window.open("https://t.me/share/url?url="+encodeURIComponent(location.href));
-}
-
-/* تحميل الفيديو بعلامة مائية */
-function downloadVideo(src){
- const video=document.createElement("video");
- video.src=src;
- video.crossOrigin="anonymous";
- video.onloadeddata=()=>{
-  const canvas=document.createElement("canvas");
-  canvas.width=video.videoWidth;
-  canvas.height=video.videoHeight;
-  const ctx=canvas.getContext("2d");
-  ctx.drawImage(video,0,0);
-  ctx.fillStyle="rgba(255,255,255,0.6)";
-  ctx.font="40px Arial";
-  ctx.fillText("PUBG MOBILE",canvas.width-300,canvas.height-30);
-  const a=document.createElement("a");
-  a.href=canvas.toDataURL("image/png");
-  a.download="PUBG_MOBILE.png";
-  a.click();
- };
-}
 </script>
 
 </body>
